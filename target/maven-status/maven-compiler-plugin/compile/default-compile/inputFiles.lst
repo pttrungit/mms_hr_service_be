@@ -1,0 +1,14 @@
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/controller/UserController.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/service/LeaveBalanceService.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/MmsHrBackendApplication.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/entity/LeaveRequest.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/service/UserService.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/service/LeaveRequestService.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/controller/LeaveRequestController.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/config/CorsConfig.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/repository/LeaveRequestRepository.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/entity/LeaveBalance.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/repository/UserRepository.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/controller/LeaveBalanceController.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/repository/LeaveBalanceRepository.java
+/Users/phanthanhtrung/Workplace/mentor/HRM/mms_hr_service_be/src/main/java/com/mms/hr/entity/User.java
