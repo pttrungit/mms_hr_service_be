@@ -48,8 +48,9 @@ public class LeaveRequestController {
         System.out.println("📋 Returning leave reasons: " + leaveReasons.size() + " reasons");
         return ResponseEntity.ok(leaveReasons);
     }
-    
-    @GetMapping("/leave-requests")
+
+    @CrossOrigin(origins = "http://localhost:3000") // Allow React app
+    @RequestMapping("/leave-requests")
     public ResponseEntity<List<LeaveRequest>> getAllLeaveRequests() {
         List<LeaveRequest> requests = leaveRequestService.getAllLeaveRequests();
         System.out.println("📄 Returning " + requests.size() + " leave requests");
