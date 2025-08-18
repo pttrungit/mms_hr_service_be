@@ -14,6 +14,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
     
     List<User> findByIsActiveTrue();
+
+    Optional<User> findByUsername(String username);
     
     @Query("SELECT u FROM User u WHERE u.role IN ('Manager', 'Supervisor', 'Director') AND u.isActive = true")
     List<User> findPotentialApprovers();

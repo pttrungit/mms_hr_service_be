@@ -29,9 +29,31 @@ public class User {
     
     @Column(name = "manager_id")
     private Long managerId;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Column(name = "username")
+    private String username;
     
     @Column(name = "is_active")
     private Boolean isActive = true;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Column(name = "password")
+    private String password;
     
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)

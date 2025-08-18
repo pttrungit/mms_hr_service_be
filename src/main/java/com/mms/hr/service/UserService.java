@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -30,5 +31,10 @@ public class UserService {
     
     public User createUser(User user) {
         return userRepository.save(user);
+    }
+
+    public boolean validateUser(String username, String password) {
+        Optional<User> user = userRepository.findByUsername(username);
+        return user.isPresent() && user.get().getPassword().equals(password);
     }
 }

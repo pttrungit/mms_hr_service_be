@@ -6,9 +6,9 @@ spring:
     name: mms-hr-backend
     
   datasource:
-    url: jdbc:postgresql://localhost:5432/mms_hr_service
-    username: mms_hr
-    password: password123
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin123
     driver-class-name: org.postgresql.Driver
     
   jpa:

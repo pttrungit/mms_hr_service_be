@@ -12,17 +12,17 @@ import java.util.List;
 @RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
-    
+
     @Autowired
     private UserService userService;
-    
+
     @GetMapping("/users")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllActiveUsers();
         System.out.println("👥 Returning " + users.size() + " active users");
         return ResponseEntity.ok(users);
     }
-    
+
     @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         try {
@@ -34,11 +34,21 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-    
+
     @GetMapping("/users/approvers")
     public ResponseEntity<List<User>> getPotentialApprovers() {
         List<User> approvers = userService.getPotentialApprovers();
         System.out.println("👔 Returning " + approvers.size() + " potential approvers");
         return ResponseEntity.ok(approvers);
+    }
+    //@CrossOrigin(origins = "http://localhost:3000") //
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/login")
+    public ResponseEntity<Boolean> login(
+            @RequestParam String username,
+            @RequestParam String password) {
+
+        boolean success = userService.validateUser(username, password);
+        return ResponseEntity.ok(success);
     }
 }
