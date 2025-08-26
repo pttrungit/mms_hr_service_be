@@ -1,6 +1,8 @@
 package com.mms.hr.controller;
 
+import com.mms.hr.DTO.UserDTO;
 import com.mms.hr.entity.User;
+import com.mms.hr.mapper.UserMapper;
 import com.mms.hr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -50,5 +52,14 @@ public class UserController {
 
         boolean success = userService.validateUser(username, password);
         return ResponseEntity.ok(success);
+    }
+
+
+    @RequestMapping("/users")
+    @PostMapping
+    public ResponseEntity<User> createUser(@RequestBody UserDTO request) {
+        UserMapper mapper = new UserMapper();
+        User newUser = userService.createUser(mapper.toEntity(request));
+        return ResponseEntity.ok(newUser);
     }
 }

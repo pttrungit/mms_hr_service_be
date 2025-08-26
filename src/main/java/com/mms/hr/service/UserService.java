@@ -37,4 +37,5 @@ public class UserService {
         Optional<User> user = userRepository.findByUsername(username);
         return user.isPresent() && user.get().getPassword().equals(password);
     }
+
 }
