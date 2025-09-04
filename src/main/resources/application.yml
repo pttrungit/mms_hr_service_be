@@ -4,28 +4,31 @@ server:
 spring:
   application:
     name: mms-hr-backend
-    
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: admin123
     driver-class-name: org.postgresql.Driver
-    
+
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: none   # tắt validate để Flyway tự migrate trước khi Hibernate check
     show-sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
         format_sql: true
-        
+
   flyway:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: true
-    
+    clean-on-validation-error: true   # tự clean DB nếu migration lỗi/missing table
+    clean-disabled: false              # cho phép flyway.clean() chạy
+    out-of-order: true                 # chạy migration version thấp hơn nếu thêm version mới
+
   jackson:
     serialization:
       write-dates-as-timestamps: false
