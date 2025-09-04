@@ -1,9 +1,11 @@
 com/mms/hr/entity/User.class
 com/mms/hr/repository/UserRepository.class
 com/mms/hr/controller/UserController.class
+com/mms/hr/mapper/UserMapper.class
 com/mms/hr/controller/LeaveRequestController.class
 com/mms/hr/MmsHrBackendApplication.class
 com/mms/hr/controller/LeaveBalanceController.class
+com/mms/hr/DTO/UserDTO.class
 com/mms/hr/repository/LeaveRequestRepository.class
 com/mms/hr/service/LeaveBalanceService.class
 com/mms/hr/service/LeaveRequestService.class
